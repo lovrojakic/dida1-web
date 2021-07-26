@@ -2,10 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: "Alte DIN 1451 Mittelschrift", sans-serif !important;
-}
-
 section {
     position: relative;
     padding-top: 4rem;
@@ -32,8 +28,3 @@ h1 {
 .primary-text-color {
     color: #00adef !important;
 }
-
-@font-face {
-    font-family: 'Alte DIN 1451 Mittelschrift';
-    src:  url('../fonts/din1451alt.ttf');
-  }
