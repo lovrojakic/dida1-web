@@ -1,9 +1,17 @@
 body {
-    font-family: "Alte DIN 1451 Mittelschrift", sans-serif;
+    font-family: "Alte DIN 1451 Mittelschrift", sans-serif !important;
 }
 
 .navbar-custom {
     background-color: white;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.naslovnica-custom {
+    padding-top: 2rem;
 }
 
 @font-face {
