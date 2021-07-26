@@ -1,6 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Alte DIN 1451 Mittelschrift", sans-serif !important;
 }
+
+section {
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 
 .navbar-custom {
     background-color: white;
