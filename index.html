@@ -41,7 +41,8 @@
           <ul class="navbar-nav" style="margin-left:auto">
             <li class="nav-item px-2"><a class="nav-link active home-link fw-bold" href="#home">Naslovnica</a>
             </li>
-            <li class="nav-item px-2"><a class="nav-link aboutUs-link fw-bold" href="#aboutUs">O nama</a>
+            <li class="nav-item px-2"><a class="nav-link aboutUs-link fw-bold" href="#aboutUs">O
+                nama</a>
             </li>
             <li class="nav-item px-2"><a class="nav-link contact-link fw-bold" href="#contact">Kontakt</a>
             </li>
@@ -51,7 +52,8 @@
             </li>
             <li class="nav-item px-2"><a class="nav-link donors-link fw-bold" href="#donors">Donatori</a>
             </li>
-            <li class="nav-item px-2"><a class="nav-link fw-bold" href="photoAlbum.html">Foto album</a>
+            <li class="nav-item px-2"><a class="nav-link fw-bold" href="photoAlbum.html">Foto
+                album</a>
             </li>
           </ul>
         </div>
@@ -155,18 +157,22 @@
 
   <!--Script-->
   <script>$('.navbar-nav>li>a').on('click', function () { $('.navbar-collapse').collapse('hide'); });</script>
-  <!--<script>
+  <script>
     $(document).ready(function () {
       $(".nav-link").bind("click", function (event) {
-        var clickedItem = $(this);
-        $(".nav-link").each(function () {
-          $(this).removeClass("active");
-        });
-        clickedItem.addClass("active");
+        if (this.href.indexOf("#") > -1) {
+          event.preventDefault();
+          document.getElementById(this.href.split("#")[1]).scrollIntoView(true);
+          var clickedItem = $(this);
+          $(".nav-link").each(function () {
+            $(this).removeClass("active");
+          });
+          clickedItem.addClass("active");
+        };
       });
     });
-  </script>-->
-  <script>
+  </script>
+  <!--<script>
     $(function () {
       $(window).scroll(function () {
         var scroll = $(window).scrollTop();
@@ -189,6 +195,25 @@
         }
       });
 
+    });
+  </script>-->
+
+  <!--here is a problems-->
+  <script>
+    $.fn.isInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    $(window).on('resize scroll', function () {
+      if (document.getElementById('contact').isInViewport) {
+        console.log("true");
+      }
     });
   </script>
 </body>
