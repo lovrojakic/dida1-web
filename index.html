@@ -38,17 +38,17 @@
         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav" style="margin-left:auto">
-          <li class="nav-item px-2"><a class="nav-link active fw-bold" href="#home">Naslovnica</a>
+          <li class="nav-item px-2"><a class="nav-link home-link fw-bold" href="#home">Naslovnica</a>
           </li>
-          <li class="nav-item px-2"><a class="nav-link fw-bold" href="#aboutUs">O nama</a>
+          <li class="nav-item px-2"><a class="nav-link aboutUs-link fw-bold" href="#aboutUs">O nama</a>
           </li>
-          <li class="nav-item px-2"><a class="nav-link fw-bold" href="#contact">Kontakt</a>
+          <li class="nav-item px-2"><a class="nav-link contact-link fw-bold" href="#contact">Kontakt</a>
           </li>
-          <li class="nav-item px-2"><a class="nav-link fw-bold" href="#programs">Programi</a>
+          <li class="nav-item px-2"><a class="nav-link programs-link fw-bold" href="#programs">Programi</a>
           </li>
-          <li class="nav-item px-2"><a class="nav-link fw-bold" href="#projects">Projekti</a>
+          <li class="nav-item px-2"><a class="nav-link projects-link fw-bold" href="#projects">Projekti</a>
           </li>
-          <li class="nav-item px-2"><a class="nav-link fw-bold" href="#donors">Donatori</a>
+          <li class="nav-item px-2"><a class="nav-link donors-link fw-bold" href="#donors">Donatori</a>
           </li>
           <li class="nav-item px-2"><a class="nav-link fw-bold" href="photoAlbum.html">Foto album</a>
           </li>
@@ -79,7 +79,72 @@
           <h6 class="fs-0 text-uppercase fw-bold text-white">o nama</h6>
           <h6 class="fw-bold fs-3 fs-lg-5 lh-sm">Bla</h6>
           <p class="my-4 fs-1 pe-xl-8">Bla bla</p>
-            <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
+          <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row flex-center">
+        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-secondary">
+          <h6 class="fs-0 text-uppercase fw-bold text-white">Kontakt</h6>
+          <h6 class="fw-bold fs-3 fs-lg-5 lh-sm">Bla</h6>
+          <p class="my-4 fs-1 pe-xl-8">Bla bla</p>
+          <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs" class="py-5" style="background-color:#00adef">
+    <div class="container">
+      <div class="row flex-center">
+        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-white">
+          <h6 class="fs-0 text-uppercase fw-bold text-white">o nama</h6>
+          <h6 class="fw-bold fs-3 fs-lg-5 lh-sm">Bla</h6>
+          <p class="my-4 fs-1 pe-xl-8">Bla bla</p>
+          <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-5">
+    <div class="container">
+      <div class="row flex-center">
+        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-secondary">
+          <h6 class="fs-0 text-uppercase fw-bold text-white">Kontakt</h6>
+          <h6 class="fw-bold fs-3 fs-lg-5 lh-sm">Bla</h6>
+          <p class="my-4 fs-1 pe-xl-8">Bla bla</p>
+          <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="donors" class="py-5" style="background-color:#00adef">
+    <div class="container">
+      <div class="row flex-center">
+        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-white">
+          <h6 class="fs-0 text-uppercase fw-bold text-white">o nama</h6>
+          <h6 class="fw-bold fs-3 fs-lg-5 lh-sm">Bla</h6>
+          <p class="my-4 fs-1 pe-xl-8">Bla bla</p>
+          <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer" class="py-5">
+    <div class="container">
+      <div class="row flex-center">
+        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-secondary">
+          <h6 class="fs-0 text-uppercase fw-bold text-white">Kontakt</h6>
+          <h6 class="fw-bold fs-3 fs-lg-5 lh-sm">Bla</h6>
+          <p class="my-4 fs-1 pe-xl-8">Bla bla</p>
+          <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
         </div>
       </div>
     </div>
@@ -87,18 +152,37 @@
 
   <!--Script-->
   <script>$('.navbar-nav>li>a').on('click', function () { $('.navbar-collapse').collapse('hide'); });</script>
-  <script>
-    $(document).ready(function() {
-        $( ".nav-link" ).bind( "click", function(event) {
-            var clickedItem = $( this );
-            $( ".nav-link" ).each( function() {
-                $( this ).removeClass( "active" );
-            });
-            clickedItem.addClass( "active" );
+  <!--<script>
+    $(document).ready(function () {
+      $(".nav-link").bind("click", function (event) {
+        var clickedItem = $(this);
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
         });
+        clickedItem.addClass("active");
+      });
     });
-    </script>
-    
+  </script>-->
+  <script>
+    $(function () {
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll < 500) {
+          $(".nav-link").each(function () {
+          $(this).removeClass("active");
+          });
+          $(".home-link").addClass("active");
+        } else if (scroll < 1000){
+          $(".nav-link").each(function () {
+          $(this).removeClass("active");
+          });
+          $(".aboutUs-link").addClass("active");
+        }
+      });
+
+    });
+  </script>
 </body>
 
 </html>
