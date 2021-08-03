@@ -133,7 +133,7 @@
     <div class="container">
       <div class="row flex-center">
         <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-white">
-          <h6 class="fs-0 text-uppercase fw-bold text-white">o nama</h6>
+          <h6 class="fs-0 text-uppercase fw-bold text-white">donatori</h6>
           <h6 class="fw-bold fs-3 fs-lg-5 lh-sm">Bla</h6>
           <p class="my-4 fs-1 pe-xl-8">Bla bla</p>
           <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
@@ -156,22 +156,18 @@
   </section>
 
   <!--Script-->
-  <script>$('.navbar-nav>li>a').on('click', function () { $('.navbar-collapse').collapse('hide'); });</script>
   <script>
     $(document).ready(function () {
       $(".nav-link").bind("click", function (event) {
+        $('.navbar-collapse').collapse('hide');
         if (this.href.indexOf("#") > -1) {
           event.preventDefault();
           document.getElementById(this.href.split("#")[1]).scrollIntoView(true);
-          var clickedItem = $(this);
-          $(".nav-link").each(function () {
-            $(this).removeClass("active");
-          });
-          clickedItem.addClass("active");
         };
       });
     });
   </script>
+
   <!--<script>
     $(function () {
       $(window).scroll(function () {
@@ -198,8 +194,8 @@
     });
   </script>-->
 
-  <!--here is a problems-->
-  <script>
+  
+  <!--<script>
     $.fn.isInViewport = function () {
       var elementTop = $(this).offset().top;
       var elementBottom = elementTop + $(this).outerHeight();
@@ -210,12 +206,99 @@
       return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 
-    $(window).on('resize scroll', function () {
-      if (document.getElementById('contact').isInViewport) {
-        console.log("true");
+    $(window).on("resize scroll", function () {
+      if ($("#donors").isInViewport()) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".donors-link").addClass("active");
+      } else if ($("#projects").isInViewport) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".projects-link").addClass("active");
+      } else if ($("#programs").isInViewport) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".programs-link").addClass("active");
+      } else if ($("#contact").isInViewport) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".contact-link").addClass("active");
+      } else if ($("#aboutUs").isInViewport) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".aboutUs-link").addClass("active");
+      } else if ($("#home").isInViewport) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".home-link").addClass("active");
       }
     });
+  </script>-->
+
+  <script>
+    $.fn.scrollEnd = function (callback, timeout) {
+      $(this).on('resize scroll', function () {
+        var $this = $(this);
+        if ($this.data('scrollTimeout')) {
+          clearTimeout($this.data('scrollTimeout'));
+        }
+        $this.data('scrollTimeout', setTimeout(callback, timeout));
+      });
+    };
+
+    $.fn.isInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop() + 80;
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+    $(window).scrollEnd(function () {
+      if ($("#home").isInViewport()) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".home-link").addClass("active");
+      }
+       else if ($("#aboutUs").isInViewport()) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".aboutUs-link").addClass("active");
+      } else if ($("#contact").isInViewport()) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".contact-link").addClass("active");
+      } else if ($("#programs").isInViewport()) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".programs-link").addClass("active");
+      } else if ($("#projects").isInViewport()) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".projects-link").addClass("active");
+      } else if ($(window).height() + $(window).scrollTop() == $(document).height()) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".donors-link").addClass("active");
+      }
+      console.log(typeof($(window).scrollTop() + $(window).height()), typeof($(document).height()));
+    }, 100);
   </script>
+
 </body>
 
 </html>
