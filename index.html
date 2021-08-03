@@ -263,13 +263,17 @@
     };
 
     $(window).scrollEnd(function () {
-      if ($("#home").isInViewport()) {
+      if ($(window).height() + $(window).scrollTop() == $(document).height()) {
+        $(".nav-link").each(function () {
+          $(this).removeClass("active");
+        });
+        $(".donors-link").addClass("active");
+      } else if ($("#home").isInViewport()) {
         $(".nav-link").each(function () {
           $(this).removeClass("active");
         });
         $(".home-link").addClass("active");
-      }
-       else if ($("#aboutUs").isInViewport()) {
+      } else if ($("#aboutUs").isInViewport()) {
         $(".nav-link").each(function () {
           $(this).removeClass("active");
         });
@@ -289,13 +293,7 @@
           $(this).removeClass("active");
         });
         $(".projects-link").addClass("active");
-      } else if ($(window).height() + $(window).scrollTop() == $(document).height()) {
-        $(".nav-link").each(function () {
-          $(this).removeClass("active");
-        });
-        $(".donors-link").addClass("active");
       }
-      console.log(typeof($(window).scrollTop() + $(window).height()), typeof($(document).height()));
     }, 100);
   </script>
 
