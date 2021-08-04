@@ -264,7 +264,7 @@
 
     $(window).scrollEnd(function () {
       var tag = document.createElement("p");
-      var text = document.createTextNode(window.innerHeight + " " +  window.scrollY + " " + document.body.offsetHeight);
+      var text = document.createTextNode(window.innerHeight +  window.scrollY + " " + document.body.offsetHeight);
       tag.appendChild(text);
       var element = document.getElementById("footer");
       element.appendChild(tag);
