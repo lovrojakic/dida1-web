@@ -194,7 +194,7 @@
     });
   </script>-->
 
-  
+
   <!--<script>
     $.fn.isInViewport = function () {
       var elementTop = $(this).offset().top;
@@ -263,7 +263,7 @@
     };
 
     $(window).scrollEnd(function () {
-      if ($(window).height() + $(window).scrollTop() == document.body.clientHeight) {
+      if (document.documentElement.clientHeight + $(window).scrollTop() == document.body.clientHeight) {
         $(".nav-link").each(function () {
           $(this).removeClass("active");
         });
