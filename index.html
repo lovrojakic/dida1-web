@@ -252,10 +252,12 @@
       });
     };
 
+
     $.fn.isInViewport = function () {
       var elementTop = $(this).offset().top;
       var elementBottom = elementTop + $(this).outerHeight();
 
+      //+80 = navbar height + 1
       var viewportTop = $(window).scrollTop() + 80;
       var viewportBottom = viewportTop + $(window).height();
 
@@ -263,7 +265,8 @@
     };
 
     $(window).scrollEnd(function () {
-      if (window.innerHeight + window.scrollY - 1>= document.body.offsetHeight) {
+      //+1 is used because mobile browser does not round nicely
+      if (window.innerHeight + window.scrollY + 1>= document.body.offsetHeight) {
         $(".nav-link").each(function () {
           $(this).removeClass("active");
         });
