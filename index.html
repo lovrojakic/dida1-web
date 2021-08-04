@@ -80,7 +80,7 @@
   <section id="aboutUs" class="py-5" style="background-color:#00adef">
     <div class="container">
       <div class="row flex-center">
-        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-white">
+        <div class="col-md-6 text-center text-md-start offset-lg-1 text-white">
           <h6 class="fs-3 fs-lg-5 lh-sm text-uppercase fw-bold">o nama</h6>
           <p class="mb-5 fw-medium fs-4">Bla bla</p>
           <a class="btn bg-white" target="_blank" href="postojim-brošura.pdf">Statut udruge</a>
@@ -91,8 +91,13 @@
 
   <section id="contact" class="py-5">
     <div class="container">
-      <div class="row flex-center">
-        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-secondary">
+      <div class="row align-items-center offset-lg-1">
+        <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.0392453090867!2d15.933253815899475!3d45.79044147910625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6a4d8eb153d%3A0x215315653fa1ed0e!2sVojakova%C4%8Dka%20ul.%2051%2C%2010000%2C%20Zagreb!5e0!3m2!1shr!2shr!4v1628114164597!5m2!1shr!2shr"
+            width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="col-md-7 col-lg-6 py-6 text-md-start text-center text-secondary">
           <h6 class="fs-3 fs-lg-5 lh-sm text-uppercase fw-bold text-primary">Kontakt</h6>
           <p class="mb-5 fw-medium fs-4 text-secondary"><span class="text-primary">a:</span> Vojakovačka 51, 10000
             Zagreb<br class="d-block"><span class="text-primary">e:</span>
@@ -107,7 +112,7 @@
   <section id="programs" class="py-5" style="background-color:#00adef">
     <div class="container">
       <div class="row flex-center">
-        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-white">
+        <div class="col-md-6 text-center text-md-start offset-lg-1 text-white">
           <h6 class="fs-3 fs-lg-5 lh-sm text-uppercase fw-bold">programi</h6>
           <p class="mb-5 fw-medium fs-4">Bla bla</p>
         </div>
@@ -117,7 +122,7 @@
   <section id="projects" class="py-5">
     <div class="container">
       <div class="row flex-center">
-        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-secondary">
+        <div class="col-md-6 text-center text-md-start offset-lg-1 text-secondary">
           <h6 class="fs-3 fs-lg-5 lh-sm text-uppercase fw-bold text-primary">projekti</h6>
           <p class="mb-5 fw-medium fs-4 text-secondary">Bla bla</p>
         </div>
@@ -126,26 +131,77 @@
   </section>
 
   <section id="donors" class="py-5" style="background-color:#00adef">
+    <div class="container px-5">
+      <div class="text-center text-md-start text-white">
+        <h6 class="fs-3 fs-lg-5 lh-sm text-uppercase fw-bold text-center">donatori</h6>
+      </div>
+      <div class="col-auto col-lg-12 d-lg-flex justify-content-center align-items-center justify-content-lg-between">
+        <img class="m-2" src="assets/images/gallery/netflix.png" height="28" alt="brands" /><br
+          class="d-sm-none d-block"><img class="m-2" src="assets/images/gallery/facebook.png" height="30"
+          alt="brands" /><img class="m-2" src="assets/images/gallery/freelancer.png" height="38" alt="brands" /><img
+          class="m-2" src="assets/images/gallery/mailbluster.png" height="38" alt="brands" /><img class="m-2"
+          src="assets/images/gallery/theme-wagon.png" height="38" alt="brands" />
+      </div>
+    </div>
+  </section>
+
+  <section id="photoAlbum" class="py-5">
     <div class="container">
-      <div class="row flex-center">
-        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-white">
-          <h6 class="fs-3 fs-lg-5 lh-sm text-uppercase fw-bold text-center">donatori</h6>
+      <div class="row align-items-center">
+        <div class="col-md-5 col-lg-6 order-0 order-md-1">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/images/gallery/app-store.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/images/gallery/freelancer.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-        <div class="col-auto col-lg-12 d-lg-flex justify-content-center align-items-center justify-content-lg-between">
-          <img class="m-2" src="assets/images/gallery/netflix.png" height="28" alt="brands" /><img class="m-2"
-            src="assets/images/gallery/facebook.png" height="30" alt="brands" /><img class="m-2"
-            src="assets/images/gallery/freelancer.png" height="38" alt="brands" /><img class="m-2"
-            src="assets/images/gallery/mailbluster.png" height="38" alt="brands" /><img class="m-2"
-            src="assets/images/gallery/theme-wagon.png" height="38" alt="brands" />
+        <div class="col-md-5 col-lg-4 py-6 text-md-start text-center">
+          <div class="list-group">
+            <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+              The current button
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">A second item</button>
+            <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+            <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+            <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button
+              item</button>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
   <section id="footer" class="py-5">
     <div class="container">
       <div class="row flex-center">
-        <div class="col-md-6 text-center text-md-start mb-6 offset-lg-1 text-secondary">
+        <div class="col-md-6 text-center text-md-start offset-lg-1 text-secondary">
           <p class="mb-5 fw-medium fs-4 text-secondary">Bla bla</p>
         </div>
       </div>
