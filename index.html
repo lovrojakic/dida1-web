@@ -263,7 +263,7 @@
     };
 
     $(window).scrollEnd(function () {
-      if ($(window).height() + $(window).scrollTop() == $(document).height()) {
+      if ($(window).height() + $(window).scrollTop() == document.body.clientHeight) {
         $(".nav-link").each(function () {
           $(this).removeClass("active");
         });
