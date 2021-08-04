@@ -263,7 +263,7 @@
     };
 
     $(window).scrollEnd(function () {
-      if (document.documentElement.clientHeight + $(window).scrollTop() == document.body.clientHeight) {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         $(".nav-link").each(function () {
           $(this).removeClass("active");
         });
