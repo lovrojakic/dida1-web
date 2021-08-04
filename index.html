@@ -263,13 +263,7 @@
     };
 
     $(window).scrollEnd(function () {
-      var tag = document.createElement("p");
-      var text = document.createTextNode(window.innerHeight +  window.scrollY + " " + document.body.offsetHeight);
-      tag.appendChild(text);
-      var element = document.getElementById("footer");
-      element.appendChild(tag);
-      console.log(window.innerHeight, window.scrollY, document.body.offsetHeight)
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      if (window.innerHeight + window.scrollY - 1>= document.body.offsetHeight) {
         $(".nav-link").each(function () {
           $(this).removeClass("active");
         });
