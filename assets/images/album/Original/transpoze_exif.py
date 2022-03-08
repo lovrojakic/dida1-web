@@ -1,7 +1,7 @@
 from PIL import ImageOps, Image
 import piexif, os
 
-path = "D:\\Projects\\postojim\\assets\\images\\album\\Original\\"
+path = "/home/lovro/Documents/projects/postojim/assets/images/album/Original/"
 dir_list = os.listdir(path)
 print(dir_list)
 
